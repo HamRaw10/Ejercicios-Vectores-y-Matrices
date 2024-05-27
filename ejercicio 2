@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int xd[5];
+    for(int i = 0; i < 5; i++){
+        printf("Ingrese el valor %d: ", i + 1);
+        scanf("%d", &xd[i]);
+    }
+    for(int i = 4; i >= 0; i--){
+         printf("\nlos valores inversos son: %d\n", xd[i]);
+    }
+    
+    return 0;
+}
