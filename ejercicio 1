@@ -1,13 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*Un programa que pida al usuario 4 números, los memorice (utilizando una tabla), 
+calcule su media aritmética y después muestre en pantalla la media y los datos tecleados.
+*/
 int main(){
-  int xd;
-  printf("Ingrese 4 valores: ");
-  int valortotal = 0;
-  for (int i = 0; i < 4; i++){
-  scanf("%d", &xd);
-  valortotal = xd + valortotal;      
-  }
-    printf("su valor es: %d", valortotal / 4);
+    double num[4], total, media, xd;
+    int i;
+    for(i = 1; i <= 4; i++){
+        printf("Ingrese el numero %d: ", i);
+        scanf("%lf", &num[i]);
+        xd += num[i];
+    }
+    for(i = 1; i <= 4; i++){
+        printf("\nLos numeros son: %.2f", num[i]);
+    }
+    media = xd / 4;
+    printf("\nLa media es %.2f", media);
+    
+    return 0;
 }
