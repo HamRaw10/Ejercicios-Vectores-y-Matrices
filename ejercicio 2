@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*Un programa que pida al usuario 5 números y luego los muestre en el orden 
+contrario al que se introdujeron.
+*/
 int main(){
-    int xd[5];
-    for(int i = 0; i < 5; i++){
-        printf("Ingrese el valor %d: ", i + 1);
-        scanf("%d", &xd[i]);
+    double num[5];
+    int i;
+    for(i = 0; i < 5; i++){
+        printf("Ingrese el valor que desea del numero %d: ", i);
+        scanf("%lf", &num[i]);
     }
-    for(int i = 4; i >= 0; i--){
-         printf("\nlos valores inversos son: %d\n", xd[i]);
+    for(i = 4; i >= 0; i--){
+        printf("\nSus valores en orden contrario fueron: %.2f", num[i]);
     }
     
-    return 0;
 }
