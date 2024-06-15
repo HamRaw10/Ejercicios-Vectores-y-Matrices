@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Un programa que almacene en una tabla el número de días que tiene cada mes 
+(supondremos que es un año no bisiesto), pida al usuario que le indique un mes 
+(1=enero, 12=diciembre) y muestre en pantalla el número de días que tiene ese mes.*/
+int main(){
+    int diames[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int mes;
+    
+    printf("Ingrese el mes: ");
+    scanf("%d", &mes);
+    if(mes < 1 || mes > 12){
+        printf("El mes es invalido, ingresar uno valido xdd");
+    }
+    else{
+        printf("El mes %d tiene %d dias xd", mes, diames[mes - 1]);
+    }
+    
+    return 0;
+}
